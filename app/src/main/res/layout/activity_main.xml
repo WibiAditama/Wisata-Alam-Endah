@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/bg">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/layout_dashboard"
+            android:layout_width="414dp"
+            android:layout_height="201dp"
+            android:background="@drawable/rounded_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/rosella_sans"
+                android:paddingRight="50dp"
+                android:text="Hi, Welcome To Desa Alamendah!"
+                android:textColor="@color/txtColor4"
+                android:textSize="35sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="337dp"
+            android:layout_height="109dp"
+            android:background="@drawable/rounded_layout_white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_dashboard"
+            app:layout_constraintVertical_bias="0.035">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Desa wisata alamendah merupakan kawasan pedesaan yang memiliki beberapa karakteristik dan potensi khusus untuk menjadi daerah tujuan wisata."
+                android:textAlignment="center"
+                android:textColor="@color/txtColor2"
+                android:textSize="18sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
