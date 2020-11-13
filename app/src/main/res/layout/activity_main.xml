@@ -1,45 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="@color/bg">
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity"
+        android:background="@color/bg">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/layout_dashboard"
+                android:layout_width="414dp"
+                android:layout_height="201dp"
+                android:background="@drawable/rounded_layout"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="@font/rosella_sans"
+                    android:paddingRight="50dp"
+                    android:text="Hi, Welcome To Desa Alamendah!"
+                    android:textColor="@color/txtColor4"
+                    android:textSize="35sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
 
         <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/layout_dashboard"
-            android:layout_width="414dp"
-            android:layout_height="201dp"
-            android:background="@drawable/rounded_layout"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginStart="30dp"
-                android:fontFamily="@font/rosella_sans"
-                android:paddingRight="50dp"
-                android:text="Hi, Welcome To Desa Alamendah!"
-                android:textColor="@color/txtColor4"
-                android:textSize="35sp" />
-
-        </androidx.appcompat.widget.LinearLayoutCompat>
-
-        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
             android:layout_width="337dp"
             android:layout_height="109dp"
+            android:layout_marginTop="5dp"
             android:background="@drawable/rounded_layout_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/layout_dashboard"
-            app:layout_constraintVertical_bias="0.035">
+            app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -52,4 +58,184 @@
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/mauWisata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mau wisata apa?"
+            android:textColor="@color/txtColor2"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.053"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/RancabaliTrip"
+            android:layout_width="74dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_layout_white2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.278"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mauWisata"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/camping"
+            android:layout_width="74dp"
+            android:layout_height="62dp"
+            android:background="@drawable/rounded_layout_white2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintStart_toEndOf="@+id/RancabaliTrip"
+            app:layout_constraintTop_toBottomOf="@+id/mauWisata"
+            app:layout_constraintVertical_bias="0.024">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/landRover"
+            android:layout_width="74dp"
+            android:layout_height="62dp"
+            android:background="@drawable/rounded_layout_white2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.306"
+            app:layout_constraintStart_toEndOf="@+id/camping"
+            app:layout_constraintTop_toBottomOf="@+id/mauWisata"
+            app:layout_constraintVertical_bias="0.024">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/paintBall"
+            android:layout_width="74dp"
+            android:layout_height="62dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_layout_white2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.278"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/RancabaliTrip"
+            app:layout_constraintVertical_bias="0.0">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/outBond"
+            android:layout_width="74dp"
+            android:layout_height="62dp"
+            android:background="@drawable/rounded_layout_white2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.118"
+            app:layout_constraintStart_toEndOf="@+id/paintBall"
+            app:layout_constraintTop_toBottomOf="@+id/camping"
+            app:layout_constraintVertical_bias="0.032">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/jelajahCurug"
+            android:layout_width="74dp"
+            android:layout_height="62dp"
+            android:background="@drawable/rounded_layout_white2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.306"
+            app:layout_constraintStart_toEndOf="@+id/outBond"
+            app:layout_constraintTop_toBottomOf="@+id/landRover"
+            app:layout_constraintVertical_bias="0.032">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <TextView
+            android:id="@+id/populer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Popular"
+            android:textColor="@color/txtColor2"
+            android:textSize="20sp"
+            android:layout_marginTop="15dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.046"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/paintBall"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/coffeTrip"
+            android:layout_width="393dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_layout_white2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/populer"
+            app:layout_constraintVertical_bias="0.0">
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/ngagoes"
+            android:layout_width="393dp"
+            android:layout_height="104dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/rounded_layout_white2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/coffeTrip"
+            app:layout_constraintVertical_bias="0.0">
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/alamEndahTrip"
+            android:layout_width="393dp"
+            android:layout_height="104dp"
+            android:background="@drawable/rounded_layout_white2"
+            android:layout_marginTop="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ngagoes">
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
