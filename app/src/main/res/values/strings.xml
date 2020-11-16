@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AlamEndah</string>
+
+    <string-array name="PaketWisata">
+        <item>Alamendah Trip</item>
+        <item>Ngagoes Ulin Kalembur</item>
+        <item>Coffe Trip</item>
+    </string-array>
 </resources>

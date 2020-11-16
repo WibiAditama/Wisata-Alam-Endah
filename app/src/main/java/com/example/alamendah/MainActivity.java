@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         CoffeeTrip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), CoffeTrip.class));
+                startActivity(new Intent(getApplicationContext(), com.example.alamendah.CoffeeTrip.class));
             }
         });
 

@@ -9,19 +9,19 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-public class NgagoesUlinKalembur extends AppCompatActivity implements AdapterView.OnItemSelectedListener
+public class CoffeeTrip extends AppCompatActivity implements AdapterView.OnItemSelectedListener
 {
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ngagoes_ulin_kalembur);
+        setContentView(R.layout.activity_coffee_trip);
 
-        Spinner spinnerNgagoes = findViewById(R.id.spinnerNgagoes);
-        ArrayAdapter<CharSequence> adapterNgagoesUlinKalembur = ArrayAdapter.createFromResource(this, R.array.PaketWisata, android.R.layout.simple_spinner_item);
-        adapterNgagoesUlinKalembur.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spinnerNgagoes.setAdapter(adapterNgagoesUlinKalembur);
-        spinnerNgagoes.setOnItemSelectedListener(this);
+        Spinner spinnerCoffeTrip = findViewById(R.id.spinnerCoffeTrip);
+        ArrayAdapter<CharSequence> adapterCoffeTrip = ArrayAdapter.createFromResource(this, R.array.PaketWisata, android.R.layout.simple_spinner_item);
+        adapterCoffeTrip.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinnerCoffeTrip.setAdapter(adapterCoffeTrip);
+        spinnerCoffeTrip.setOnItemSelectedListener(this);
     }
 
     @Override
@@ -32,8 +32,8 @@ public class NgagoesUlinKalembur extends AppCompatActivity implements AdapterVie
             case 0:
                 startActivity(new Intent(getApplicationContext(), AlamendahTrip.class));
                 break;
-            case 2:
-                startActivity(new Intent(getApplicationContext(), CoffeeTrip.class));
+            case 1:
+                startActivity(new Intent(getApplicationContext(), NgagoesUlinKalembur.class));
                 break;
         }
     }

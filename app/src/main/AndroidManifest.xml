@@ -11,7 +11,7 @@
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".AlamendahTrip"></activity>
         <activity android:name=".NgagoesUlinKalembur" />
-        <activity android:name=".CoffeTrip" />
+        <activity android:name=".CoffeeTrip" />
         <activity android:name=".WelcomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
