@@ -3,7 +3,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
-
+    flavorDimensions "mode"
     defaultConfig {
         applicationId "com.example.alamendah"
         minSdkVersion 26
@@ -14,6 +14,14 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    productFlavors {
+        sandbox {
+            applicationId "com.example.alamendah"
+            buildConfigField "String", "MERCHANT_BASE_URL", "\"https://alamendah.herokuapp.com/index.php/\""
+            buildConfigField "String", "MERCHANT_CLIENT_KEY", "\"SB-Mid-client-UN0_ii8_g94ZszEJ\""
+        }
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -21,14 +29,26 @@ android {
         }
     }
 
+    repositories {
+        jcenter()
+        // Add the midtrans repository into the list of repositories
+        maven { url "https://dl.bintray.com/pt-midtrans/maven" }
+        maven { url "https://jitpack.io" }
+    }
+
 }
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
-    implementation 'androidx.appcompat:appcompat:1.2.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+
+    //midtrans
+    implementation 'com.midtrans:uikit:1.21.2-SANDBOX'
+//    implementation 'com.midtrans:uikit:1.21.2'
+    implementation "com.midtrans:gopay-checkout:0.1.5"
 }

@@ -29,10 +29,10 @@ public class NgagoesUlinKalembur extends AppCompatActivity implements AdapterVie
     {
         switch (position)
         {
-            case 0:
+            case 1:
                 startActivity(new Intent(getApplicationContext(), AlamendahTrip.class));
                 break;
-            case 2:
+            case 3:
                 startActivity(new Intent(getApplicationContext(), CoffeeTrip.class));
                 break;
         }

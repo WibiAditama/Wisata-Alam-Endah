@@ -312,6 +312,7 @@
                 android:layout_marginBottom="18dp" />
 
             <TextView
+                android:id="@+id/priceCoffeeTrip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -400,6 +401,7 @@
                 android:layout_marginBottom="18dp" />
 
             <TextView
+                android:id="@+id/priceNgagoes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
@@ -487,6 +489,7 @@
                 android:layout_marginBottom="18dp" />
 
             <TextView
+                android:id="@+id/priceAlamendahTrip"
                 android:layout_width="wrap_content"
                 android:layout_height="65dp"
                 android:layout_alignParentStart="true"

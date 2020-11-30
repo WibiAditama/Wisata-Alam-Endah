@@ -29,10 +29,10 @@ public class AlamendahTrip extends AppCompatActivity implements AdapterView.OnIt
     {
         switch (position)
         {
-            case 1:
+            case 2:
                 startActivity(new Intent(getApplicationContext(), NgagoesUlinKalembur.class));
                 break;
-            case 2:
+            case 3:
                 startActivity(new Intent(getApplicationContext(), CoffeeTrip.class));
                 break;
         }
@@ -40,6 +40,5 @@ public class AlamendahTrip extends AppCompatActivity implements AdapterView.OnIt
 
     @Override
     public void onNothingSelected(AdapterView<?> parent)
-    {
-    }
+    {}
 }
